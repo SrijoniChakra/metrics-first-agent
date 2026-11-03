@@ -1,4 +1,4 @@
-# Trusted Finance Metrics
+# Metrics First Agent
 
 An end-to-end analytics engineering project on real public financial data (SEC EDGAR XBRL filings + ECB FX rates), built with dbt, a MetricFlow semantic layer, Airflow orchestration, and an AI agent that is only allowed to answer questions through governed metrics (via MCP) — never raw SQL.
 
