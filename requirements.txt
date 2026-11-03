@@ -1,0 +1,18 @@
+requests>=2.31
+pyarrow>=14.0
+pandas>=2.1
+pytest>=7.4
+
+# dbt (DuckDB target for local dev; add dbt-databricks later for Week 4)
+dbt-core>=1.8
+dbt-duckdb>=1.8
+
+# semantic layer
+dbt-metricflow>=0.6
+
+# MCP server (Week 3)
+mcp>=1.0
+
+# linting
+sqlfluff>=3.0
+sqlfluff-templater-dbt>=3.0
