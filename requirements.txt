@@ -12,7 +12,7 @@ dbt-duckdb>=1.8
 dbt-metricflow>=0.6
 
 # MCP server (Week 3)
-mcp>=1.0
+mcp
 
 # linting
 sqlfluff>=3.0
