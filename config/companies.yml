@@ -1,0 +1,36 @@
+# Company universe for SEC EDGAR ingestion.
+#
+# - entity_id : stable internal key. Use this (not CIK/ticker) in silver/gold tables.
+# - ciks      : one or more SEC registrants that together make up the entity's history.
+#               ALWAYS quote CIKs: unquoted 0001099219 is parsed by YAML as a number
+#               and loses its leading zeros (or is read as octal).
+# - fiscal_year_from / fiscal_year_to : optional inclusive range of fiscal years for which
+#               that CIK is the filer of record. Omit for "all years" / "to present".
+version: 1
+
+defaults:
+  reporting_currency: USD   # currency SEC XBRL facts are reported in; converted to EUR downstream
+
+companies:
+  - entity_id: jpmorgan_chase
+    name: JPMorgan Chase & Co.
+    ticker: JPM
+    ciks:
+      - cik: "0000019617"
+
+  - entity_id: metlife
+    name: MetLife, Inc.
+    ticker: MET
+    ciks:
+      - cik: "0001099219"
+
+  - entity_id: blackrock
+    name: BlackRock, Inc.
+    ticker: BLK
+    ciks:
+      # Legacy registrant: 10-Ks for FY2018-FY2023 were filed under this CIK.
+      - cik: "0001364742"
+        fiscal_year_to: 2023
+      # Current registrant after the 2024 holding-company reorganization.
+      - cik: "0002012383"
+        fiscal_year_from: 2024
