@@ -3,6 +3,7 @@ pyarrow>=14.0
 pandas>=2.1
 pytest>=7.4
 pyyaml>=6.0
+python-dotenv
 
 # dbt (DuckDB target for local dev; add dbt-databricks later for Week 4)
 dbt-core>=1.8
